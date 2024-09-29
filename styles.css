@@ -1,0 +1,113 @@
+/* Catatan: Kode CSS ini digunakan untuk membuat tampilan portofolio lebih menarik dan responsif. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #BC1B39;
+}
+
+a:hover {
+    color: #FF3737;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    background-color: #fff;
+}
+
+.sidebar {
+    flex: 0 0 200px;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    text-align: right;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    margin-bottom: 10px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.tab-content {
+    display: none; /* Menyembunyikan semua konten tab secara default */
+}
+
+.tab-content:target {
+    display: block; /* Menampilkan konten yang ditarget ketika link diklik */
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tab-content ul {
+    list-style-type: disc;
+    padding: 0 20px;
+}
+
+.tab-content li {
+    padding: 5px;
+}
+
+.tab-content h2 + ul {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0; /* Menambahkan jarak antara paragraf */
+}
+
+/* Kode CSS untuk membuat desain responsif */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        flex: 0 0 100%;
+        padding: 20px;
+        border-right: none;
+        text-align: center;
+    }
+    .main-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .sidebar {
+        padding: 10px;
+    }
+    .main-content {
+        padding: 10px;
+    }
+}
